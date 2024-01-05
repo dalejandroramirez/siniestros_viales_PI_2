@@ -1,4 +1,4 @@
--- Active: 1693964495096@@localhost@3306@pythondb
+-- Active: 1695074456068@@127.0.0.1@3306@siniestros
 CREATE DATABASE siniestros;
 
 SET GLOBAL local_infile = ON;
@@ -33,7 +33,7 @@ CREATE TABLE hechos (
 
 
 -- Asegúrate de ajustar el nombre de tu tabla y la ruta del archivo CSV según tus necesidades.
-LOAD DATA local INFILE '/home/pc/Documentos/henry/siniestros_viales_PI_2/data/clear/hechos_homicidios.csv' INTO TABLE hechos
+LOAD DATA local INFILE 'C:/Users/PC/Documents/siniestros_viales_PI_2/data/clear/hechos_homicidios.csv' INTO TABLE hechos
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
