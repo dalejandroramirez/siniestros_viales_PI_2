@@ -1,4 +1,4 @@
--- Active: 1695074456068@@127.0.0.1@3306@prueba
+-- Active: 1693964495096@@localhost@3306@pythondb
 CREATE DATABASE siniestros;
 
 SET GLOBAL local_infile = ON;
@@ -8,7 +8,7 @@ SHOW VARIABLES LIKE 'secure_file_priv';
 
 use siniestros;
 DROP TABLE hechos;
-CREATE TABLE Hechos (
+CREATE TABLE hechos (
     ID VARCHAR(10) PRIMARY KEY,
     N_VICTIMAS INT,
     FECHA DATE,
@@ -33,7 +33,7 @@ CREATE TABLE Hechos (
 
 
 -- Asegúrate de ajustar el nombre de tu tabla y la ruta del archivo CSV según tus necesidades.
-LOAD DATA local INFILE 'C:/Users/PC/Documents/siniestros_viales_PI_2/data/clear/hechos_homicidios.csv' INTO TABLE Hechos
+LOAD DATA local INFILE '/home/pc/Documentos/henry/siniestros_viales_PI_2/data/clear/hechos_homicidios.csv' INTO TABLE hechos
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
@@ -57,7 +57,7 @@ CREATE TABLE victimas (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
-LOAD DATA local INFILE 'C:/Users/PC/Documents/siniestros_viales_PI_2/data/clear/victimas_homicidios.csv' INTO TABLE victimas
+LOAD DATA local INFILE '/home/pc/Documentos/henry/siniestros_viales_PI_2/data/clear/victimas_homicidios.csv' INTO TABLE victimas
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
