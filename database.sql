@@ -8,27 +8,27 @@ SHOW VARIABLES LIKE 'secure_file_priv';
 
 use siniestros;
 DROP TABLE hechos;
+
 CREATE TABLE hechos (
-    ID VARCHAR(10) PRIMARY KEY,
-    N_VICTIMAS INT,
-    FECHA DATE,
-    AAAA INT,
-    MM INT,
-    DD INT,
-    HORA TIME,
-    HH INT,
-    LUGAR_DEL_HECHO VARCHAR(255),
-    TIPO_DE_CALLE VARCHAR(50),
-    Calle VARCHAR(50),
-    Altura INT,
-    Cruce VARCHAR(255) COLLATE utf8mb4_unicode_ci,
-    Direccion_Normalizada VARCHAR(255) COLLATE utf8mb4_unicode_ci,
-    COMUNA INT,
-    pos_x FLOAT,
-    pos_y FLOAT,
-    PARTICIPANTES VARCHAR(50),
-    VICTIMA VARCHAR(50),
-    ACUSADO VARCHAR(50)
+    id_hechos VARCHAR(10) PRIMARY KEY,
+    n_victimas INT,
+    fecha DATE,
+    anho INT,
+    mes INT,
+    dia INT,
+    hora TIME,
+    franja_horaria INT,
+    lugar_del_hecho VARCHAR(255),
+    tipo_de_calle VARCHAR(50),
+    calle VARCHAR(50),
+    direccion_normalizada VARCHAR(255) COLLATE utf8mb4_unicode_ci,
+    comuna INT,
+    longitud FLOAT,
+    latitud FLOAT,
+    participantes VARCHAR(50),
+    victimas VARCHAR(50),
+    acusado VARCHAR(50),
+    Cruce_boolean VARCHAR(5)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
@@ -41,23 +41,29 @@ IGNORE 1 ROWS; -- Para omitir la primera fila si contiene encabezados de columna
 
 SELECT * from hechos;
 
+
+-- id_hechos	fecha	anho	mes	dia	rol	victimas	sexo	edad	fecha_fallecimiento	misma_fecha_accidente	rango_etario	semestre
+
 DROP TABLE victimas;
 CREATE TABLE victimas (
-    ID_hecho VARCHAR(10),
-    FECHA DATE,
-    AAAA INT,
-    MM INT,
-    DD INT,
-    ROL VARCHAR(20),
-    VICTIMA VARCHAR(20),
-    SEXO VARCHAR(10),
-    EDAD INT,
-    FECHA_FALLECIMIENTO DATETIME,
-    FOREIGN KEY (ID_hecho) REFERENCES hechos(ID)
+    id_hechos VARCHAR(10),
+    fecha DATE,
+    anho INT,
+    mes INT,
+    dia INT,
+    rol VARCHAR(20),
+    victimas VARCHAR(20),
+    sexo VARCHAR(10),
+    edad INT,
+    fecha_fallecimiento DATE,
+    misma_fecha_accidente VARCHAR(5),
+    rango_etario VARCHAR(20),
+    semestre INT
+   -- FOREIGN KEY (id_hechos) REFERENCES hechos(id_hechos)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
-LOAD DATA local INFILE '/home/pc/Documentos/henry/siniestros_viales_PI_2/data/clear/victimas_homicidios.csv' INTO TABLE victimas
+LOAD DATA local INFILE 'C:/Users/PC/Documents/siniestros_viales_PI_2/data/clear/victimas_homicidios.csv' INTO TABLE victimas
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
