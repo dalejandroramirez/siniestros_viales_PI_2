@@ -53,6 +53,7 @@ $$\begin{cases}
 0 && \text{Si el accidente no fue en un cruce}\\
 -1 && \text{No existe registro de la ubicación}
 \end{cases}$$
+
 ## Cantidad de accidente en cruces por tipo de calle
 
 Los cruces de calles representan puntos críticos donde cualquier situación puede surgir, especialmente si los peatones o conductores están distraídos. En este análisis, nos enfocaremos en examinar la cantidad de víctimas en accidentes que ocurren específicamente en cruces, centrándonos en los distintos tipos de vías presentes en la Ciudad Autónoma de Buenos Aires (CABA): Avenidas, Autopistas, Calles y la General Paz.
@@ -113,6 +114,8 @@ Observamos que la cantidad de accidentes en cruces ha experimentado una disminuc
 
 # Indicadores de desempeño
 
+<p align="center"><img src="images\objetivos.png" alt="nulos de hechos"></p>
+
 Queremos monitorear la evulución de la accidentalidad, en las 15 comunas de CABA. para esto, nos basamos en el analisis anterior y en las consignas solicitadas por el cliente para controlar y monitorear de manera oportuna las situaciones más relevantes en la movilidad.
 ************************************************************************************************************************************
 
@@ -164,17 +167,22 @@ $$\frac{población(millones)}{área(km^2)}\cdot (\text{número de victimas})$$
 
 <p align="center"><img src="images\06_victimas_sexo.png" alt="nulos de hechos"></p>
 
-## Conclusiones
-
-conclusión...
+<p align="center"><img src="images\conclusiones.png" alt="nulos de hechos"></p>
 
 ## Base de datos
+- Tabla con información sobre la población en las comunas de caba [link](https://www.indec.gob.ar/ftp/cuadros/poblacion/proy_1025_depto_caba.xls)
 
-https://www.indec.gob.ar/ftp/cuadros/poblacion/proy_1025_depto_caba.xls
+- Página oficial de indec. [link](https://www.indec.gob.ar/ )
 
+- Encontraras la base de datos suministrada por el cliente en la pagina oficial de indec -> [link](https://data.buenosaires.gob.ar/dataset/victimas-siniestros-viales)
 
-https://www.indec.gob.ar/ -- informacion de la poblacion
+- Encotraras la geolocalización de caba en formato geojson -> [link](https://data.buenosaires.gob.ar/dataset/comunas/resource/b0b627ac-5b47-4574-89ac-6999b63598ee)
 
-[link](https://data.buenosaires.gob.ar/dataset/victimas-siniestros-viales) -- base de datos
-
-https://data.buenosaires.gob.ar/dataset/comunas/resource/b0b627ac-5b47-4574-89ac-6999b63598ee -- geojson
+## Tecnologias utilizadas
+![Static Badge](https://img.shields.io/badge/PowerBI-gray?style=flat&logo=powerbi)
+![Static Badge](https://img.shields.io/badge/Python-gray?style=flat&logo=python)
+![Static Badge](https://img.shields.io/badge/-Pandas-gray?style=flat&logo=pandas)
+![Static Badge](https://img.shields.io/badge/-Matplotlib-gray?style=flat&logo=matplotlib)
+![Static Badge](https://img.shields.io/badge/-Seaborn-gray?style=flat&logo=seaborn)
+![Static Badge](https://img.shields.io/badge/-Jupyter_Notebook-gray?style=flat&logo=jupyter)
+![Static Badge](https://img.shields.io/badge/Visual_Studio_Code-gray?style=flat&logo=visual%20studio%20code&logoColor=white)
