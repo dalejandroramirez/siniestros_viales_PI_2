@@ -131,7 +131,7 @@ $$\left(\frac{victimas_{\text{año anterior}} - victimas_{\text{año actual}} }{
 ***************************************************************************************************************************
 
 <div style="text-align:center; font-weight:bold;font-size:25px;">Reducir en un 7% la cantidad de accidentes mortales de motociclistas en el último año, en CABA, respecto al año anterior.</div>
-<div style="text-align:center; font-weight:bold;font-size:25px;">reduciondo la variación anual en un 7%</div>
+
 
 <p align="center"><img src="images\03_tipo_victima.png" alt="tipo de victima"></p>
 
